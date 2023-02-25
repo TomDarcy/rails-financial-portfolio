@@ -1,0 +1,22 @@
+<!-- app/views/investments/index.html.erb -->
+<h1>All Investments</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Created At</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @investments.each do |investment| %>
+      <tr>
+        <td><%= investment.name %></td>
+        <td><%= investment.description %></td>
+        <td><%= investment.investment_type %></td>
+        <td><%= investment.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

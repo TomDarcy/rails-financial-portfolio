@@ -1,0 +1,22 @@
+<!-- app/views/investments/show.html.erb -->
+<h1><%= @investment.name %> Transactions</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Type</th>
+      <th>Amount</th>
+      <th>Created At</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @investment.transactions.each do |transaction| %>
+      <tr>
+        <td><%= transaction.date %></td>
+        <td><%= transaction.transaction_type %></td>
+        <td><%= transaction.amount %></td>
+        <td><%= transaction.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

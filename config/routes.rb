@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  resources :investments do
+    resources :transactions, only: %i[new create]
+  end
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources :transactions, only: %i[edit update destroy]
+
+  resources :assets
+
+  root to: 'investments#index'
 end

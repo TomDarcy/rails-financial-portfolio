@@ -1,0 +1,11 @@
+<!-- app/views/assets/new.html.erb -->
+<h1>New Asset</h1>
+<%= form_for @asset do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :asset_type %>
+  <%= f.select :asset_type, ['checking account', 'savings account', 'real estate'] %>
+  <%= f.label :balance %>
+  <%= f.number_field :balance %>
+  <%= f.submit %>
+<% end %>

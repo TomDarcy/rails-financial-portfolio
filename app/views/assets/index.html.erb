@@ -1,0 +1,22 @@
+<!-- app/views/assets/index.html.erb -->
+<h1>All Assets</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Balance</th>
+      <th>Created At</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @assets.each do |asset| %>
+      <tr>
+        <td><%= asset.name %></td>
+        <td><%= asset.asset_type %></td>
+        <td><%= asset.balance %></td>
+        <td><%= asset.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
